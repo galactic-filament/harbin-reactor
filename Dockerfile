@@ -3,7 +3,7 @@ FROM node
 COPY ./app /srv/app
 WORKDIR /srv/app
 
-RUN npm install -g browserify
-  npm install
+RUN npm install -g browserify \
+  && npm install
 
-CMD ["bash"]
+CMD ["node", "./index.js"]
