@@ -23,6 +23,9 @@
         "prefer-const": [
             2
         ],
+        "no-console": [
+            0
+        ],
         "no-const-assign": [
             2
         ],

@@ -5,7 +5,6 @@ export default class Counter extends React.Component {
     super(props)
 
     this.state = { count: props.initialCount }
-    this.tick = this.tick.bind(this)
   }
 
   tick() {
@@ -18,7 +17,7 @@ export default class Counter extends React.Component {
     return (
       <div>
         <h1>Count: {this.state.count}</h1>
-        <button type="button" onClick={this.tick}>Increment</button>
+        <button type="button" onClick={this.tick.bind(this)}>Increment</button>
       </div>
     )
   }
