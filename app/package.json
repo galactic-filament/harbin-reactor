@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "browserify -t [ babelify --presets [ es2015 react ] ] ./src/main.jsx -o ./build/bundle.js",
+    "build:w": "watchify -v -t [ babelify --presets [ es2015 react ] ] ./src/main.jsx -o ./build/bundle.js",
     "test": "jest"
   },
   "author": "",
