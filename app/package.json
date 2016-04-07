@@ -7,7 +7,7 @@
     "build": "browserify -t [ babelify --presets [ es2015 react ] ] ./src/main.jsx -o ./build/bundle.js",
     "build:w": "watchify -v -t [ babelify --presets [ es2015 react ] ] ./src/main.jsx -o ./build/bundle.js",
     "test": "jest",
-    "lint": "eslint --ext .js --ext .jsx ./src"
+    "lint": "eslint --ext .js --ext .jsx ."
   },
   "author": "",
   "license": "ISC",
