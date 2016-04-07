@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "browserify -t [ babelify --presets [ es2015 react ] ] ./src/main.jsx -o ./build/bundle.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +16,8 @@
     "express": "^4.13.4",
     "react": "^0.14.8",
     "react-dom": "^0.14.8"
+  },
+  "devDependencies": {
+    "jest-cli": "^0.10.0"
   }
 }
