@@ -4,7 +4,7 @@ export default class Counter extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { count: 0 }
+    this.state = { count: props.initialCount }
     this.tick = this.tick.bind(this)
   }
 
@@ -23,3 +23,6 @@ export default class Counter extends React.Component {
     )
   }
 }
+
+Counter.propTypes = { initialCount: React.PropTypes.number }
+Counter.defaultProps = { initialCount: 0 }

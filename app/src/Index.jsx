@@ -7,7 +7,7 @@ export default class Index extends React.Component {
     return (
       <div>
         <HelloWorld/>
-        <Counter/>
+        <Counter initialCount={0}/>
       </div>
     )
   }
