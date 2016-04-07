@@ -1,13 +1,14 @@
 import React from 'react'
 
 export default class Counter extends React.Component {
-  constructor(props) {
-    super(props)
+  constructor(...args) {
+    super(...args)
 
-    this.state = { count: props.initialCount }
+    this.state = { count: this.props.initialCount }
+    this.handleTick = this.handleTick.bind(this)
   }
 
-  tick() {
+  handleTick() {
     this.setState({
       count: this.state.count + 1
     })
@@ -17,7 +18,7 @@ export default class Counter extends React.Component {
     return (
       <div>
         <h1>Count: {this.state.count}</h1>
-        <button type="button" onClick={this.tick.bind(this)}>Increment</button>
+        <button type="button" onClick={this.handleTick}>Increment</button>
       </div>
     )
   }

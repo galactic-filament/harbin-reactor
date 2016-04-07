@@ -6,8 +6,8 @@ export default class Index extends React.Component {
   render() {
     return (
       <div>
-        <HelloWorld/>
-        <Counter initialCount={0}/>
+        <HelloWorld />
+        <Counter initialCount={0} />
       </div>
     )
   }

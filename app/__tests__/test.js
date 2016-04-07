@@ -8,7 +8,7 @@ import HelloWorld from '../src/HelloWorld.jsx'
 describe('sum', () => {
   it('adds', () => {
     const helloWorld = TestUtils.renderIntoDocument(
-      <HelloWorld/>
+      <HelloWorld />
     )
     const helloWorldNode = ReactDOM.findDOMNode(helloWorld)
     expect(helloWorldNode.textContent).toEqual('Hello, world!')
