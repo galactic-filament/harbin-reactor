@@ -7,5 +7,7 @@ node_js:
 before_install:
 - cd ./app
 before_script:
-- npm install -g eslint eslint-plugin-react
-- npm run lint
+- npm install --silent -g eslint eslint-plugin-react
+- npm run lint --silent
+script:
+- npm test --silent
