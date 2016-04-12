@@ -1,6 +1,6 @@
 import React from 'react'
-import HelloWorld from './HelloWorld.jsx'
-import Counter from './Counter.jsx'
+import HelloWorld from './HelloWorld'
+import Counter from './Counter'
 
 export default class Index extends React.Component {
   render() {
