@@ -10,7 +10,7 @@ describe('Counter', () => {
     const counter = TestUtils.renderIntoDocument(
       <Counter initialCount={initialCount} />
     )
-    counter.handleTick()
+    counter.handleClick()
     expect(counter.state.count).toEqual(initialCount + 1)
   })
 })
