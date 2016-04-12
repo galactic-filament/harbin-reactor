@@ -2,7 +2,7 @@
 
 import React from 'react'
 import TestUtils from 'react-addons-test-utils'
-import Counter from '../src/Counter'
+import Counter from '../src/components/Counter'
 
 describe('Counter', () => {
   it('adds', () => {

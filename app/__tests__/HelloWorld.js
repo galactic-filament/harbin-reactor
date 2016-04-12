@@ -3,7 +3,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import TestUtils from 'react-addons-test-utils'
-import HelloWorld from '../src/HelloWorld'
+import HelloWorld from '../src/components/HelloWorld'
 
 describe('sum', () => {
   it('adds', () => {

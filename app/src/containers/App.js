@@ -1,8 +1,8 @@
 import React from 'react'
-import HelloWorld from './HelloWorld'
-import Counter from './Counter'
+import HelloWorld from '../components/HelloWorld'
+import Counter from '../components/Counter'
 
-export default class Index extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
       <div>
