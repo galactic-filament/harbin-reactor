@@ -1,27 +1,19 @@
 import React, { Component, PropTypes } from 'react'
 
 export default class Counter extends Component {
-  constructor(...args) {
-    super(...args)
-
-    this.state = { count: this.props.initialCount }
-  }
-
-  handleClick() {
-    this.setState({
-      count: this.state.count + 1
-    })
-  }
-
   render() {
+    const { count, actions } = this.props
+
     return (
       <div>
-        <h1>Count: {this.state.count}</h1>
-        <button type="button" onClick={this.handleClick.bind(this)}>Increment</button>
+        <h1>Count: {count}</h1>
+        <button type="button" onClick={actions.incrementCount}>Increment</button>
       </div>
     )
   }
 }
 
-Counter.propTypes = { initialCount: PropTypes.number }
-Counter.defaultProps = { initialCount: 0 }
+Counter.propTypes = {
+  count: PropTypes.number,
+  actions: PropTypes.shape({})
+}
