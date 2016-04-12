@@ -7,8 +7,9 @@ const initialState = {
 const rootReducer = (state = initialState, action) => {
   switch(action.type) {
   case INCREMENT:
-    state.count += 1
-    return state
+    return Object.assign({}, state, {
+      count: state.count + 1
+    })
   default:
     return state
   }
