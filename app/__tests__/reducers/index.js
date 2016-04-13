@@ -1,5 +1,6 @@
-/*global describe it expect*/
+/*global describe it*/
 
+import expect from 'expect'
 import * as ActionTypes from '../../src/constants/ActionTypes'
 import rootReducer from '../../src/reducers'
 
