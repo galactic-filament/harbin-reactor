@@ -5,13 +5,13 @@ import React from 'react'
 import TestUtils from 'react-addons-test-utils'
 import Counter from '../src/components/Counter'
 
-const setup = (propOverrides) => {
-  const props = Object.assign({
+const setup = () => {
+  const props = {
     count: 0,
     actions: {
       incrementCount: expect.createSpy()
     }
-  }, propOverrides)
+  }
   const renderer = TestUtils.createRenderer()
   renderer.render(<Counter {...props} />)
 
