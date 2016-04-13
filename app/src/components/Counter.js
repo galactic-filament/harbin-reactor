@@ -14,6 +14,6 @@ export default class Counter extends Component {
 }
 
 Counter.propTypes = {
-  count: PropTypes.number,
-  actions: PropTypes.shape({})
+  count: PropTypes.number.isRequired,
+  actions: PropTypes.shape({}).isRequired
 }
