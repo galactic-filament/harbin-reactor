@@ -1,7 +1,7 @@
 /*global describe it*/
 
 import expect from 'expect'
-import * as Actions from '../../src/Actions'
+import * as Actions from '../../src/actions'
 import * as ActionTypes from '../../src/constants/ActionTypes'
 
 describe('Actions', () => {
