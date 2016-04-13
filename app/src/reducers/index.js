@@ -1,18 +1,32 @@
-import { INCREMENT } from '../constants/ActionTypes'
+import { combineReducers } from 'redux'
+import { INCREMENT, ASYNC_INCREMENT_START, ASYNC_INCREMENT_END } from '../constants/ActionTypes'
 
-const initialState = {
-  count: 0
+const initialCountState = {
+  value: 0,
+  isAsyncCounting: false
 }
 
-const rootReducer = (state = initialState, action) => {
+function count(state = initialCountState, action) {
   switch(action.type) {
   case INCREMENT:
     return Object.assign({}, state, {
-      count: state.count + 1
+      value: state.value + 1
+    })
+  case ASYNC_INCREMENT_START:
+    return Object.assign({}, state, {
+      isAsyncCounting: true
+    })
+  case ASYNC_INCREMENT_END:
+    return Object.assign({}, state, {
+      isAsyncCounting: false
     })
   default:
     return state
   }
 }
+
+const rootReducer = combineReducers({
+  count
+})
 
 export default rootReducer

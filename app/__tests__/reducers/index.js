@@ -5,14 +5,22 @@ import * as ActionTypes from '../../src/constants/ActionTypes'
 import rootReducer from '../../src/reducers'
 
 describe('Root reducer', () => {
+  const initialState = {
+    count: {
+      value: 0,
+      isAsyncCounting: false
+    }
+  }
+  
   it('Should return the initial state', () => {
-    expect(rootReducer(undefined, {})).toEqual({ count: 0 })
+    expect(rootReducer(undefined, {})).toEqual(initialState)
   })
   it('Should handle INCREMENT', () => {
-    expect(rootReducer({ count: 0 }, {
+    expect(rootReducer(initialState, {
       type: ActionTypes.INCREMENT
-    })).toEqual({
-      count: 1
+    }).count).toEqual({
+      value: 1,
+      isAsyncCounting: false
     })
   })
 })
