@@ -13,13 +13,8 @@ export function asyncIncrementEnd() {
 }
 
 export function asyncIncrement() {
-  return (dispatch) => {
+  return dispatch => {
     dispatch(asyncIncrementStart())
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        dispatch(asyncIncrementEnd())
-        resolve()
-      }, 500)
-    })
+    return (new Promise(resolve => resolve())).then(() => dispatch(asyncIncrementEnd()))
   }
 }

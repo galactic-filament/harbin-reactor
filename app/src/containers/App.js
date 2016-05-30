@@ -18,8 +18,8 @@ class App extends Component {
 }
 
 App.propTypes = {
-  count: PropTypes.number,
-  actions: PropTypes.shape({})
+  count: PropTypes.number.isRequired,
+  actions: PropTypes.shape({}).isRequired
 }
 
 function mapStateToProps(state) {
