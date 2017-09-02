@@ -1,5 +1,0 @@
-node_modules
-app/build/*
-!build/.gitkeep
-npm-debug.log
-.vscode
