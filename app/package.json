@@ -19,6 +19,11 @@
     "react-scripts-ts": "2.6.0"
   },
   "devDependencies": {
+    "@types/enzyme": "^2.8.8",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-15": "^1.0.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^15.6.2",
     "tslint": "^5.7.0"
   }
 }
