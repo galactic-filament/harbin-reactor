@@ -21,10 +21,10 @@
     "redux": "^3.7.2"
   },
   "devDependencies": {
-    "@types/enzyme": "^2.8.8",
+    "@types/enzyme": "^2.8.11",
     "@types/react-redux": "^5.0.9",
     "enzyme": "^3.0.0",
-    "enzyme-adapter-react-15": "^1.0.0",
+    "enzyme-adapter-react-15": "^1.0.1",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^15.6.2",
     "tslint": "^5.7.0"
