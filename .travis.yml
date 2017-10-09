@@ -6,6 +6,5 @@ node_js:
 before_install:
 - cd ./app
 script:
-- npm run -s lint -- -p ./tsconfig.json
-- npm run -s lint -- -p ./tsconfig.test.json
+- npm run -s lint
 - npm test -s
