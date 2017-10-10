@@ -12,7 +12,7 @@ it('Renders correctly when no enthusiasm level is given', () => {
     expect(hello.find('.greeting').text()).toEqual('Hello Adrian!');
 });
 
-it('Renders correctly when 1 enthusiasm level is given', () => {
+it('Renders correctly when 2 enthusiasm level is given', () => {
     const hello = shallow(<Hello name="Adrian" enthusiasmLevel={2} />);
     expect(hello.find('.greeting').text()).toEqual('Hello Adrian!!');
 });
