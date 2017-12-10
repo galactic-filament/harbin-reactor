@@ -33,6 +33,6 @@ it('Calls onDecrement when - button is clicked', () => {
 it('Calls onIncrement when - button is clicked', () => {
     const incrementStub = sinon.stub();
     const hello = shallow(<Hello name="Adrian" enthusiasmLevel={1} onIncrement={incrementStub} />);
-    hello.find('#increment').first().simulate("click");
+    hello.find('#increment').first().simulate('click');
     expect(incrementStub.calledOnce);
 });
