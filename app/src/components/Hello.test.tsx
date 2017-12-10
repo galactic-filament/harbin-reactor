@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { configure, shallow } from 'enzyme';
+import * as sinon from 'sinon';
 
 const Adapter = require('enzyme-adapter-react-15');
 
@@ -20,4 +21,11 @@ it('Renders correctly when 2 enthusiasm level is given', () => {
 it('Renders correctly when 1 enthusiasm level is given', () => {
     expect(() => shallow(<Hello name="Adrian" enthusiasmLevel={0} />))
         .toThrowError('You could be more enthusiastic!');
+});
+
+it('Calls ondecrement when - button is clicked', () => {
+    const decrementStub = sinon.stub();
+    const hello = shallow(<Hello name="Adrian" enthusiasmLevel={1} onDecrement={decrementStub} />);
+    hello.find("#decrement").first().simulate("click");
+    expect(decrementStub.calledOnce);
 });

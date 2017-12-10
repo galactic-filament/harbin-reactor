@@ -20,8 +20,8 @@ function Hello({ name, enthusiasmLevel = 1, onIncrement, onDecrement }: Props) {
         Hello {name + getExcalamationMarks(enthusiasmLevel)}
       </div>
       <div>
-        <button onClick={onDecrement}>-</button>
-        <button onClick={onIncrement}>+</button>
+        <button id="decrement" onClick={onDecrement}>-</button>
+        <button id="increment" onClick={onIncrement}>+</button>
       </div>
     </div>
   );
