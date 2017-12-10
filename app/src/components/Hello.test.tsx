@@ -23,9 +23,16 @@ it('Renders correctly when 1 enthusiasm level is given', () => {
         .toThrowError('You could be more enthusiastic!');
 });
 
-it('Calls ondecrement when - button is clicked', () => {
+it('Calls onDecrement when - button is clicked', () => {
     const decrementStub = sinon.stub();
     const hello = shallow(<Hello name="Adrian" enthusiasmLevel={1} onDecrement={decrementStub} />);
-    hello.find("#decrement").first().simulate("click");
+    hello.find('#decrement').first().simulate('click');
     expect(decrementStub.calledOnce);
+});
+
+it('Calls onIncrement when - button is clicked', () => {
+    const incrementStub = sinon.stub();
+    const hello = shallow(<Hello name="Adrian" enthusiasmLevel={1} onIncrement={incrementStub} />);
+    hello.find('#increment').first().simulate("click");
+    expect(incrementStub.calledOnce);
 });
